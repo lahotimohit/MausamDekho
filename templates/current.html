@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Current Weather</title>
+    <link href="../static/css/current.css" rel="stylesheet" />
+  </head>
+  <body
+    style="
+      background-image: linear-gradient(
+        315deg,
+        hsl(184deg 89% 52%) 0%,
+        hsl(185deg 87% 62%) 18%,
+        hsl(185deg 86% 68%) 26%,
+        hsl(185deg 85% 72%) 33%,
+        hsl(185deg 85% 76%) 39%,
+        hsl(185deg 84% 79%) 44%,
+        hsl(185deg 84% 83%) 50%,
+        hsl(185deg 84% 86%) 56%,
+        hsl(185deg 84% 89%) 61%,
+        hsl(185deg 83% 92%) 67%,
+        hsl(185deg 83% 95%) 74%,
+        hsl(185deg 83% 97%) 82%,
+        hsl(0deg 0% 100%) 100%
+      );
+    "
+  >
+    <div
+      style="
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      "
+    >
+      <center>
+        <div
+          class="card"
+          style="
+            width: 35rem;
+            background-color: rgb(2, 118, 147);
+            border: 2px solid whitesmoke;
+            border-radius: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 45vh;
+          "
+        >
+          <div class="card-body">
+            <h1
+              class="card-title"
+              style="font-family: Arial, Helvetica, sans-serif; color: white;
+              font-weight: bold;"
+              ;
+            >
+              CURRENT WEATHER
+            </h1>
+            <p
+              class="card-text"
+              style="
+                font-family: Arial, Helvetica, sans-serif;
+                color: whitesmoke;
+                font-size: medium;
+                padding: 10px;
+              "
+              ;
+            >
+            <div style="font-family: Arial, Helvetica, sans-serif;
+                color: whitesmoke;
+                font-size: 23pt;">
+              <span class="curr-item"><b>Real Feels:</b> {{ data['main']['feels_like'] }}°C</span><br />
+              <span class="curr-item"><b>Temp:</b> {{ data['main']['temp'] }}°C</span><br />
+              <span class="curr-item"><b>{{ data['weather'][0]['description'] }}</b></span><br />
+              <span class="curr-item"><b>Humidity:</b> {{ data['main']['humidity'] }} </span><br />
+              <span class="curr-item"><b>Wind Speed:</b> {{ data['wind']['speed'] }} km/h</span><br />
+              <span class="curr-item"><b>Wind Gusts:</b> {{ data['wind']['gust'] }}</span>
+            </div>
+            </p>
+          </div>
+        </div>
+      </center>
+
+      <!-- <div class="current-main">
+      <span class="current-title">CURRENT WEATHER</span><br />
+      <span class="current-temp">Temp: {{ data['main']['temp'] }} </span><br />
+      <span class="current-feel">
+        Real Feels: {{ data['main']['feels_like'] }} </span
+      ><br />
+      <span class="current-summary">
+        Summary: {{ data['weather'][0]['description'] }} </span
+      ><br />
+      <span class="current-humidity"
+        >Humidity: {{ data['main']['humidity'] }}</span
+      ><br />
+      <span class="current-wind-speed"
+        >Wind Speed: {{ data['wind']['speed'] }} km/h</span
+      ><br />
+      <span class="current-wind-gusts"
+        >Wind Gusts: {{ data['wind']['gust'] }}</span
+      >
+    </div> -->
+    </div>
+  </body>
+</html>
